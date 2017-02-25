@@ -4,22 +4,24 @@
 'use strict';
 
 exports.redlock = {
-    nodes: [
-        {
-            host: '10.0.7.62',
-            port: 6379,
-        },
+    client: {
+        nodes: [
+            {
+                host: '10.0.7.62',
+                port: 6379,
+            },
 
-        {
-            host: '10.0.7.62',
-            port: 6479,
-        },
+            {
+                host: '10.0.7.62',
+                port: 6479,
+            },
 
-        {
-            host: '10.0.7.62',
-            port: 6579,
-        }
-    ],
+            {
+                host: '10.0.7.62',
+                port: 6579,
+            }
+        ]
+    },
 
     // the expected clock drift; for more details
     // see http://redis.io/topics/distlock
